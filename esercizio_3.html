@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html> 
+    <head> </head>
+    <body> 
+        <script>
+            "use strict";
+            let coef = [0, 0, 0]
+            coef = coef.map( e => {
+                e = prompt("Inserire coefficiente")
+                return +e
+            })
+            if(coef[0] == 0){
+                alert("Non è un' equazione di 2 grado")
+            }else{
+                let delta = coef[1]**2 -4*coef[0]*coef[2]
+                if(delta < 0){
+                    alert("Non ha soluzioni")
+                } else{
+                    let sol1 = (Math.sqrt(delta)-coef[1])/(2*coef[0])
+                    let sol2 = (-Math.sqrt(delta)-coef[1])/(2*coef[0])
+                    sol1 === sol2 ? alert("Soluzioni non distinte"): alert("Soluzioni distinte")
+                    alert(sol1)
+                    alert(sol2)
+                }
+            }
+        </script>
+    </body>
+</html>
